@@ -45,7 +45,7 @@ public class Tinto extends Vinho {
 	public void setGelada(boolean gelada) {
 		this.gelada = gelada;
 	}
-	public int getUva() {
+	public int getTamanho() {
 		return tamanho;
 	}
 	public void setTamanho(int tamanho) {

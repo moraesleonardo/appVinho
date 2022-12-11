@@ -1,5 +1,7 @@
 package br.edu.infnet.appvinho.model.domain;
 
+import br.edu.infnet.appvinho.model.exceptions.TamanhoBrancoInvalidoException;
+import br.edu.infnet.appvinho.model.exceptions.TamanhoRoseInvalidoException;
 import br.edu.infnet.appvinho.model.exceptions.TamanhoTintoInvalidoException;
 import br.edu.infnet.appvinho.model.exceptions.ValorZeradoException;
 
@@ -24,7 +26,7 @@ public abstract class Vinho {
 		this.valor = valor;
 	}
 	
-	public abstract float calcularValorVenda() throws TamanhoTintoInvalidoException;
+	public abstract float calcularValorVenda() throws TamanhoTintoInvalidoException, TamanhoBrancoInvalidoException, TamanhoRoseInvalidoException;
 
 	@Override
 	public String toString() {
