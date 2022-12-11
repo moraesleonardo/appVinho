@@ -6,10 +6,10 @@ import br.edu.infnet.appvinho.model.exceptions.ValorZeradoException;
 public abstract class Vinho {
 
 	private String codigo;
-	private String nome;
+	private String procedencia;
 	private float valor;
 	
-	public Vinho(String codigo, String nome, float valor) throws ValorZeradoException {
+	public Vinho(String codigo, String procedencia, float valor) throws ValorZeradoException {
 		
 		if(valor == 0) {
 			throw new ValorZeradoException("O valor do vinho está zerado!");
@@ -20,7 +20,7 @@ public abstract class Vinho {
 		}
 
 		this.codigo = codigo;
-		this.nome = nome;
+		this.procedencia = procedencia;
 		this.valor = valor;
 	}
 	
@@ -32,7 +32,7 @@ public abstract class Vinho {
 		StringBuilder sb = new StringBuilder();
 		sb.append(codigo);
 		sb.append(";");
-		sb.append(nome);
+		sb.append(procedencia);
 		sb.append(";");
 		sb.append(valor);
 
@@ -42,8 +42,8 @@ public abstract class Vinho {
 	public String getCodigo() {
 		return codigo;
 	}
-	public String getNome() {
-		return nome;
+	public String getProcedencia() {
+		return procedencia;
 	}
 	public float getValor() {
 		return valor;

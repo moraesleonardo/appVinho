@@ -37,7 +37,7 @@ public class Compra {
 		System.out.println("Qtde Vinhos: " + vinhos.size());
 		System.out.println("Vinhos:");
 		for(Vinho v : vinhos) {
-			System.out.println("- " + v.getNome());
+			System.out.println("- " + v.getProcedencia());
 		}
 	}
 	

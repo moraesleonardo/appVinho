@@ -9,8 +9,8 @@ public class Tinto extends Vinho {
 	private int tamanho;
 	private String marca;
 
-	public Tinto(String codigo, String nome, float valor, String marca) throws ValorZeradoException {
-		super(codigo, nome, valor);
+	public Tinto(String codigo, String procedencia, float valor, String marca) throws ValorZeradoException {
+		super(codigo, procedencia, valor);
 		this.marca = marca;
 	}
 
@@ -18,7 +18,7 @@ public class Tinto extends Vinho {
 	public float calcularValorVenda() throws TamanhoTintoInvalidoException {
 		
 		if(tamanho < 500) {
-			throw new TamanhoTintoInvalidoException("Não existe vinho tinto com esta uva!");
+			throw new TamanhoTintoInvalidoException("O tamanho do vinho está inválido!");
 		}
 		
 		return this.getValor() + (gelada ? 3 : 0) + tamanho * 0.08f;
@@ -30,7 +30,7 @@ public class Tinto extends Vinho {
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append(";");
-		sb.append(gelada ? "gelada=S" : "gelada=N");
+		sb.append(gelada ? "gelada" : "temperatura ambiente");
 		sb.append(";");
 		sb.append(tamanho);
 		sb.append(";");

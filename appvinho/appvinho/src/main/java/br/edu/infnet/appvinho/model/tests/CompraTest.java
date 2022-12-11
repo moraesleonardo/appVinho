@@ -21,7 +21,7 @@ public class CompraTest {
 		List<Vinho> vinhosV4 = new ArrayList<Vinho>();
 
 		try {
-			Tinto t1 = new Tinto("b1caf5", "cafezin", 5, "Cooooffeeee");
+			Tinto t1 = new Tinto("1234","Português",35,"Taboadella");
 			t1.setGelada(false);
 			t1.setTamanho(500);
 
@@ -31,9 +31,9 @@ public class CompraTest {
 		} catch (ValorZeradoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
-
+		
 		try {
-			Tinto t2 = new Tinto("b2cho10", "chopin", 10, "Brahhh");
+			Tinto t2 = new Tinto("1235","Italiano",40,"Primo Reale");
 			t2.setGelada(true);
 			t2.setTamanho(500);
 
@@ -43,9 +43,9 @@ public class CompraTest {
 		} catch (ValorZeradoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
-
+		
 		try {
-			Tinto t3 = new Tinto("b3suc8", "Suquin", 8, "Dafruta");
+			Tinto t3 = new Tinto("1236", "Francês", 78, "Fleur Saint-Jean Rouge");
 			t3.setGelada(true);
 			t3.setTamanho(500);
 
@@ -54,18 +54,18 @@ public class CompraTest {
 		} catch (ValorZeradoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
-
+		
 		try {
-			Compra c1 = new Compra(new Cliente("huguinho", "12312312312", "hugo@hugo.com"), vinhosV1);
+			Compra c1 = new Compra(new Cliente("Paulo", "043.177.789-10", "paulo@paulo.com"), vinhosV1);
 			c1.setDescricao("Primeiro pedido");
 			c1.setWeb(false);
 			c1.imprimir();
 		} catch (ClienteInvalidoException | CompraSemClienteException | CompraSemVinhoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
-
+		
 		try {
-			Compra c2 = new Compra(new Cliente("zezinho", "12312312312", "ze@ze.com"), vinhosV2);
+			Compra c2 = new Compra(new Cliente("Pedro", "043.177.789-11", "pedro@pedro.com"), vinhosV2);
 			c2.setDescricao("Segundo pedido");
 			c2.setWeb(true);
 			c2.imprimir();
@@ -74,7 +74,7 @@ public class CompraTest {
 		}
 
 		try {
-			Compra c3 = new Compra(new Cliente("luizinho", "12312312312", "luiz@luiz.com"), vinhosV3);
+			Compra c3 = new Compra(new Cliente("João", "043.177.789-12", "joao@joao.com"), vinhosV3);
 			c3.setDescricao("Terceiro pedido");
 			c3.setWeb(true);
 			c3.imprimir();
@@ -83,7 +83,7 @@ public class CompraTest {
 		}
 
 		try {
-			Compra c4 = new Compra(new Cliente("mariazinha", "12312312312", "maria@maria.com"), vinhosV4);
+			Compra c4 = new Compra(new Cliente("Maria", "043.177.789-13", "maria@maria.com"), vinhosV4);
 			c4.setDescricao("Quarto pedido");
 			c4.setWeb(true);
 			c4.imprimir();
