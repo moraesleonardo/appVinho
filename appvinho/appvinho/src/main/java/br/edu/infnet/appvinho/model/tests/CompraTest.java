@@ -5,7 +5,9 @@ import java.util.List;
 
 import br.edu.infnet.appvinho.model.domain.Tinto;
 import br.edu.infnet.appvinho.model.domain.Compra;
+import br.edu.infnet.appvinho.model.domain.Rose;
 import br.edu.infnet.appvinho.model.domain.Vinho;
+import br.edu.infnet.appvinho.model.domain.Branco;
 import br.edu.infnet.appvinho.model.domain.Cliente;
 import br.edu.infnet.appvinho.model.exceptions.CompraSemVinhoException;
 import br.edu.infnet.appvinho.model.exceptions.CompraSemClienteException;
@@ -20,11 +22,11 @@ public class CompraTest {
 		List<Vinho> vinhosV3 = new ArrayList<Vinho>();
 		List<Vinho> vinhosV4 = new ArrayList<Vinho>();
 
+		//Tinto
 		try {
 			Tinto t1 = new Tinto("1234","Português",35,"Taboadella");
 			t1.setGelada(false);
 			t1.setTamanho(500);
-
 			vinhosV1.add(t1);
 			vinhosV2.add(t1);
 			vinhosV4.add(t1);
@@ -36,7 +38,6 @@ public class CompraTest {
 			Tinto t2 = new Tinto("1235","Italiano",40,"Primo Reale");
 			t2.setGelada(true);
 			t2.setTamanho(500);
-
 			vinhosV2.add(t2);
 			vinhosV3.add(t2);
 			vinhosV4.add(t2);
@@ -48,9 +49,73 @@ public class CompraTest {
 			Tinto t3 = new Tinto("1236", "Francês", 78, "Fleur Saint-Jean Rouge");
 			t3.setGelada(true);
 			t3.setTamanho(500);
-
 			vinhosV3.add(t3);
 			vinhosV4.add(t3);
+		} catch (ValorZeradoException e) {
+			System.out.println("[ERRO] " + e.getMessage());
+		}
+		
+		//Rose
+		try {
+			Rose r1 = new Rose("1134","Português",25,"Biscardo");
+			r1.setBest_seller(false);
+			r1.setPremios(5);
+			vinhosV1.add(r1);
+			vinhosV2.add(r1);
+			vinhosV4.add(r1);			
+		} catch (ValorZeradoException e) {
+			System.out.println("[ERRO] " + e.getMessage());
+		}
+
+		try {
+			Rose r2 = new Rose("1135","Italiano",35,"Tormaresca");
+			r2.setBest_seller(true);
+			r2.setPremios(3);
+			vinhosV2.add(r2);
+			vinhosV3.add(r2);
+			vinhosV4.add(r2);	
+		} catch (ValorZeradoException e) {
+			System.out.println("[ERRO] " + e.getMessage());
+		}
+		
+		try {
+			Rose r3 = new Rose("1136", "Francês", 70, "Villa Riviera");
+			r3.setBest_seller(true);
+			r3.setPremios(1);
+			vinhosV3.add(r3);
+			vinhosV4.add(r3);		
+		} catch (ValorZeradoException e) {
+			System.out.println("[ERRO] " + e.getMessage());
+		}
+		
+		//Branco
+		try {
+			Branco b1 = new Branco("1254","Português",32,"Duorum");
+			b1.setEspumante(false);
+			b1.setPack(4);
+			vinhosV1.add(b1);
+			vinhosV2.add(b1);
+			vinhosV4.add(b1);			
+		} catch (ValorZeradoException e) {
+			System.out.println("[ERRO] " + e.getMessage());
+		}
+		try {
+			Branco b2 = new Branco("1255","Italiano",30,"Castellani");
+			b2.setEspumante(true);
+			b2.setPack(3);
+			vinhosV2.add(b2);
+			vinhosV3.add(b2);
+			vinhosV4.add(b2);	
+		} catch (ValorZeradoException e) {
+			System.out.println("[ERRO] " + e.getMessage());
+		}
+		
+		try {
+			Branco b3 = new Branco("1256", "Francês", 27, "Saint-Émilion");
+			b3.setEspumante(true);
+			b3.setPack(10);
+			vinhosV3.add(b3);
+			vinhosV4.add(b3);		
 		} catch (ValorZeradoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}

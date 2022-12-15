@@ -1,0 +1,11 @@
+T;1234;Português;35.0;temperatura ambiente;600;Taboadella
+T;1235;Italiano;40.0;gelada;600;Primo Reale
+T;1236;Francês;78.0;gelada;1000;Fleur Saint-Jean Rouge
+R;1134;Português;25.0;lancamento;4;Biscardo
+R;1135;Italiano;35.0;best_seller;3;Tormaresca
+R;1136;Francês;70.0;best_seller;1;Villa Riviera
+B;1254;Português;32.0;vinho;4;Duorum
+B;1255;Italiano;30.0;espumante;3;Castellani
+B;1256;Francês;27.0;espumante;10;Saint-Émilion
+C;Primeiro pedido;web;043.177.789-10;paulo@paulo.com;Paulo
+C;Segundo pedido;web;043.177.789-11;pedro@pedro.com;Pedro
